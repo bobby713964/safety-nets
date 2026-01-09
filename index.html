@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spider Safety Net Solutions | Safety Nets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', 'Segoe UI', sans-serif; }
+
+    body {
+      background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('safety-net-bg.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #2c2c2c;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1593697820821-6b7c9b0d8b41');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 18px 8%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 { font-size: 28px; font-weight: 700; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover { color: #00e5ff; }
+
+    .hero {
+      padding: 80px 8%;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      gap: 40px;
+      background: #fff;
+    }
+
+    .hero h2 { font-size: 44px; margin-bottom: 20px; color: #203a43; }
+
+    .hero p { font-size: 18px; margin-bottom: 30px; line-height: 1.6; }
+
+    .btn {
+      padding: 12px 30px;
+      background: linear-gradient(135deg, #ff9933, #138808);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .btn:hover { background: linear-gradient(135deg, #138808, #ff9933); }
+
+    .btn:hover { background: #2c5364; }
+
+    .hero img { width: 100%; border-radius: 16px; }
+
+    section { padding: 70px 8%; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #b85c00;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      transition: 0.3s;
+      border-top: 4px solid #ff9933;
+    }
+
+    .card:hover { transform: translateY(-8px); }
+
+    .card h3 { margin-bottom: 15px; color: #203a43; }
+
+    .card p { line-height: 1.6; }
+
+    .about {
+      background: #eef4f8;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img { width: 100%; border-radius: 16px; }
+
+    .contact {
+      background: #203a43;
+      color: #fff;
+      border-radius: 20px;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .contact input, .contact textarea {
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .contact button { width: 160px; }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .about { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+    }
+  
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      z-index: 999;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .contact-card h3 { margin-bottom: 10px; }
+
+  
+    /* Gallery Styles */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      cursor: pointer;
+      transform: translateY(0);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.15);
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.7));
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay h3 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      animation: fadeInUp 1.1s ease both;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: #fff;
+      padding: 70px 8%;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .testimonial {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Scroll animation */
+    .reveal { opacity: 0; transform: translateY(40px); transition: 1s; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* Map */
+    .map iframe { width: 100%; height: 350px; border: 0; border-radius: 16px; }
+
+  </style>
+  <meta name="description" content="Spider Safety Net – Best safety nets near you for balconies, construction sites, children, pets and buildings. Trusted Indian safety net service.">
+  <meta name="keywords" content="Safety Nets Near Me, Balcony Safety Nets, Construction Safety Nets, Spider Safety Net, Child Safety Net, Bird Net">
+  <meta name="author" content="Spider Safety Net">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>Spider Safety Net</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="https://wa.me/917207593308" target="_blank">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" style="background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1590559899731-a382839e5549'); background-size: cover; background-position: center;">
+  <div>
+    <h2>Professional Safety Net Solutions</h2>
+    <p>
+      We provide high-quality safety nets for construction sites, buildings,
+      balconies, industrial areas, and residential safety needs.
+    </p>
+    <a href="https://wa.me/917207593308" target="_blank"><a href="https://wa.me/917207093308?text=Hi%20I%20need%20safety%20net%20installation%20details" target="_blank"><button class="btn">Get a Free Quote</button></a></a>
+  </div>
+  <img src="https://images.unsplash.com/photo-1618220179428-22790b461013" alt="Indian Apartment Safety Nets">
+</section>
+
+<section id="services" class="fade-in" style="background: url('https://images.unsplash.com/photo-1581092334651-ddf26d9d9f4a'); background-size: cover; background-attachment: fixed;">
+  <div class="section-title">
+    <h2>Our Safety Net Solutions</h2>
+  </div>
+
+  <div class="gallery" onclick="openLightbox(event)">
+    <div class="gallery-item">
+      <img src="safety1.jpg" alt="Building Edge Safety Net">
+      <div class="gallery-overlay"><h3>Building Edge Safety Nets</h3></div>
+    </div>
+    <div class="gallery-item">
+      <img src="safety2.jpg" alt="Under Construction Net">
+      <div class="gallery-overlay"><h3>Under-Construction Protection</h3></div>
+    </div>
+    <div class="gallery-item">
+      <img src="safety3.jpg" alt="Horizontal Safety Net">
+      <div class="gallery-overlay"><h3>Horizontal Safety Nets</h3></div>
+    </div>
+    <div class="gallery-item">
+      <img src="safety4.jpg" alt="Children Safety Net">
+      <div class="gallery-overlay"><h3>Children Safety Nets</h3></div>
+    </div>
+    <div class="gallery-item">
+      <img src="safety5.jpg" alt="Apartment Safety Nets">
+      <div class="gallery-overlay"><h3>Apartment Balcony Nets</h3></div>
+    </div>
+    <div class="gallery-item">
+      <img src="safety6.jpg" alt="Pet Safety Net">
+      <div class="gallery-overlay"><h3>Pet Protection Safety Nets</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials reveal">
+  <div class="section-title"><h2>What Our Customers Say</h2></div>
+  <div class="testimonial-grid">
+    <div class="testimonial">⭐️⭐️⭐️⭐️⭐️<p>Very professional work. Installed balcony safety nets perfectly.</p><strong>– Ramesh, Hyderabad</strong></div>
+    <div class="testimonial">⭐️⭐️⭐️⭐️⭐️<p>Quick response and strong quality nets for my apartment.</p><strong>– Priya, Bangalore</strong></div>
+    <div class="testimonial">⭐️⭐️⭐️⭐️⭐️<p>Best safety net service near me. Highly recommended.</p><strong>– Anil, Chennai</strong></div>
+  </div>
+</section>
+
+<!-- Map -->
+<section class="reveal">
+  <div class="section-title"><h2>Service Areas</h2></div>
+  <p style="text-align:center">Hyderabad • Bangalore • Chennai • Nearby Areas</p>
+  <div class="map">
+    <iframe src="https://www.google.com/maps?q=Hyderabad&output=embed"></iframe>
+  </div>
+</section>
+
+<section id="about" class="about" style="background: linear-gradient(rgba(238,244,248,0.95), rgba(238,244,248,0.95)), url('https://images.unsplash.com/photo-1593697820821-6b7c9b0d8b41'); background-size: cover;">
+  <img src="https://images.unsplash.com/photo-1628595351029-c2bf17511435" alt="Indian Construction Safety Nets">
+  <div>
+    <h2>About Spider Safety Net</h2>
+    <p>
+      With years of experience, Spider Safety Net Solutions delivers reliable,
+      cost-effective, and certified safety net installations. Customer safety
+      and quality are our top priorities.
+    </p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="section-title">
+    <h2>Contact Us Instantly</h2>
+  </div>
+
+  <div style="text-align:center; max-width:700px; margin:auto;">
+    <p style="margin-bottom:25px;">We respond within minutes. Choose the fastest way to reach us.</p>
+
+    <a href="https://wa.me/917207593308?text=Hi%20I%20am%20interested%20in%20safety%20net%20installation" target="_blank">
+      <button class="btn">Chat on WhatsApp</button>
+    </a>
+
+    <div class="contact-cards">
+      <div class="contact-card">
+        <h3>✉️ Email Us</h3>
+        <p><a href="mailto:bobbymaddu996@gmail.com" style="color:#fff; text-decoration:none;">bobbymaddu996@gmail.com</a></p>
+      </div>
+      <div class="contact-card">
+        <h3>📞 Call Us</h3>
+        <p>7207593308</p>
+      </div>
+      <div class="contact-card">
+        <h3>⚡ Quick Response</h3>
+        <p>Within 5–10 minutes</p>
+      </div>
+      <div class="contact-card">
+        <h3>🛠 On-Site Visit</h3>
+        <p>Free inspection available</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Spider Safety Net. All Rights Reserved.<br>
+  <a href="mailto:bobbymaddu996@gmail.com" style="color:#00e5ff; text-decoration:none;">Email: bobbymaddu996@gmail.com</a>
+</footer>
+
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/917207593308?text=Hi%20I%20need%20safety%20net%20installation" target="_blank" class="whatsapp-float">💬</a>
+
+<!-- Lightbox -->
+<div class="lightbox" onclick="this.style.display='none'">
+  <img id="lightboxImg">
+</div>
+
+<script>
+function openLightbox(e){
+  if(e.target.tagName==='IMG'){
+    document.getElementById('lightboxImg').src=e.target.src;
+    document.querySelector('.lightbox').style.display='flex';
+  }
+}
+
+window.addEventListener('scroll',()=>{
+  document.querySelectorAll('.reveal').forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight-100){
+      el.classList.add('active');
+    }
+  });
+});
+</script>
+</body>
+</html>

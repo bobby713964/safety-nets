@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spider Safety Net Solutions | Safety Nets</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', 'Segoe UI', sans-serif; }
@@ -297,6 +298,30 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
+    /* Floating Call Button */
+.call-float {
+  position: fixed;
+  bottom: 25px;
+  right: 95px; /* placed left of WhatsApp */
+  background: #0a7cff;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  z-index: 999;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+.call-float:hover {
+  transform: scale(1.1);
+}
+
+
     /* Scroll animation */
     .reveal { opacity: 0; transform: translateY(40px); transition: 1s; }
     .reveal.active { opacity: 1; transform: translateY(0); }
@@ -308,14 +333,37 @@
   <meta name="description" content="Spider Safety Net – Best safety nets near you for balconies, construction sites, children, pets and buildings. Trusted Indian safety net service.">
   <meta name="keywords" content="Safety Nets Near Me, Balcony Safety Nets, Construction Safety Nets, Spider Safety Net, Child Safety Net, Bird Net">
   <meta name="author" content="Spider Safety Net">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Spider Safety Net",
+  "description": ["Balcony", "construction", "children and pet safety net installation services"],
+  "telephone": "+91-7207593308",
+  "email": "bobbymaddu996@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hyderabad",
+    "addressCountry": "IN"
+  },
+  "areaServed": ["Hyderabad", "Bangalore", "Chennai"],
+  "sameAs": [
+    "https://wa.me/917207593308"
+  ]
+}
+</script>
+
 </head>
 <body>
+
+<a href="tel:7207593308" class="call-float">📞</a>
+
 
 <header>
   <nav>
     <h1>Spider Safety Net</h1>
     <ul>
-      <li><a href="#">Home</a></li>
+      <li><a href="">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="https://wa.me/917207593308" target="_blank">Contact</a></li>
@@ -325,6 +373,7 @@
 
 <section class="hero" style="background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1590559899731-a382839e5549'); background-size: cover; background-position: center;">
   <div>
+    <h2><marquee behavior="" direction="">welcome to spider safety nets</marquee></h2>
     <h2>Professional Safety Net Solutions</h2>
     <p>
       We provide high-quality safety nets for construction sites, buildings,
@@ -334,38 +383,132 @@
   </div>
   <img src="https://images.unsplash.com/photo-1618220179428-22790b461013" alt="Indian Apartment Safety Nets">
 </section>
-
+ 
 <section id="services" class="fade-in" style="background: url('https://images.unsplash.com/photo-1581092334651-ddf26d9d9f4a'); background-size: cover; background-attachment: fixed;">
   <div class="section-title">
     <h2>Our Safety Net Solutions</h2>
+  </div> <br>
+
+  <br>
+   <div class="d-flex justify-content-evenly">
+
+
+
+    <div class="card" style="width: 18rem;">
+  <img src="safety12.jpg"  class="card-img-top" alt="..." >
+  <div class="card-body">
+    <p class="card-text">Where safety meets solid craftsmanship.</p>
+    <a href="tel:7207593308" class="call-float">📞</a>
+  </div>
   </div>
 
-  <div class="gallery" onclick="openLightbox(event)">
-    <div class="gallery-item">
-      <img src="safety1.jpg" alt="Building Edge Safety Net">
-      <div class="gallery-overlay"><h3>Building Edge Safety Nets</h3></div>
-    </div>
-    <div class="gallery-item">
-      <img src="safety2.jpg" alt="Under Construction Net">
-      <div class="gallery-overlay"><h3>Under-Construction Protection</h3></div>
-    </div>
-    <div class="gallery-item">
-      <img src="safety3.jpg" alt="Horizontal Safety Net">
-      <div class="gallery-overlay"><h3>Horizontal Safety Nets</h3></div>
-    </div>
-    <div class="gallery-item">
-      <img src="safety4.jpg" alt="Children Safety Net">
-      <div class="gallery-overlay"><h3>Children Safety Nets</h3></div>
-    </div>
-    <div class="gallery-item">
-      <img src="safety5.jpg" alt="Apartment Safety Nets">
-      <div class="gallery-overlay"><h3>Apartment Balcony Nets</h3></div>
-    </div>
-    <div class="gallery-item">
-      <img src="safety6.jpg" alt="Pet Safety Net">
-      <div class="gallery-overlay"><h3>Pet Protection Safety Nets</h3></div>
-    </div>
+  <div class="card" style="width: 18rem;">
+  <img src="safety11.jpg"  class="card-img-top" alt="..." >
+  <div class="card-body">
+    <p class="card-text">Built for security, designed for style.</p>
+    <a href="tel:7207593308" class="call-float">📞</a>
   </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+  <img src="safety10.jpg"  class="card-img-top" alt="..." >
+  <div class="card-body">
+    <p class="card-text">Guarding homes with reliable steel.</p>
+    <a href="tel:7207593308" class="call-float">📞</a>
+  </div>
+  </div>
+
+
+  </div>
+  <br><br><br>
+
+
+  <div class="d-flex justify-content-evenly">
+
+<div class="card" style="width: 18rem;">
+  <img src="safety7.jpg"  class="card-img-top" alt="..." >
+  <div class="card-body">
+    <p class="card-text">Protection you can trust, strength you can see.</p>
+    <a href="tel:7207593308" class="call-float">📞</a>
+  </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+  <img src="safety8.jpg"  class="card-img-top" alt="..." >
+  <div class="card-body">
+    <p class="card-text">Elegant grills with uncompromised safety.</p>
+    <a href="tel:7207593308" class="call-float">📞</a>
+  </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+  <img src="safety9.jpg"  class="card-img-top" alt="..." >
+  <div class="card-body">
+    <p class="card-text">Solid protection for every space you care about.</p>
+    <a href="tel:7207593308" class="call-float">📞</a>
+  </div>
+  </div>
+  </div>
+  <br><br><br>
+
+  <div class="d-flex justify-content-evenly">
+    
+  <div class="card" style="width: 18rem;">
+  <img src="safety6.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Safety nets aren’t barriers — they’re promises to protect the voiceless.</p>
+    <a href="tel:7207593308" class="call-float">📞</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="safety1.jpg"  class="card-img-top" alt="..." >
+  <div class="card-body">
+    <p class="card-text">Sky-Roof safety nets.</p>
+    <a href="tel:7207593308" class="call-float">📞</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="safety3.jpg"  class="card-img-top" alt="..." >
+  <div class="card-body">
+    <p class="card-text">Protecting your home with strength you can trust.</p>
+    <a href="tel:7207593308" class="call-float">📞</a>
+  </div>
+</div>
+</div>
+<br><br><br>
+
+
+<div class="d-flex justify-content-evenly">
+  <div class="card" style="width: 18rem;">
+  <img src="safety4.jpg"  class="card-img-top" alt="..." >
+  <div class="card-body">
+    <p class="card-text"> Safety nets for Pets</p>
+    <a href="tel:7207593308" class="call-float">📞</a>
+  </div>
+  </div>
+
+<div class="card" style="width: 18rem;">
+  <img src="safety5.jpg"  class="card-img-top" alt="..." >
+  <div class="card-body">
+    <p class="card-text">Solid protection for every space you care about.</p>
+    <a href="tel:7207593308" class="call-float">📞</a>
+  </div>
+</div>
+  
+<div class="card" style="width: 18rem;">
+  <img src="safety2.jpg"  class="card-img-top" alt="..." >
+  <div class="card-body">
+    <p class="card-text"> “Built tough to keep your world secure.”.</p>
+    <a href="tel:7207593308" class="call-float">📞</a>
+  </div>
+</div>
+</div>
+<br><br><br>
+
+
+  
 </section>
 
 <!-- Testimonials -->
@@ -388,7 +531,7 @@
 </section>
 
 <section id="about" class="about" style="background: linear-gradient(rgba(238,244,248,0.95), rgba(238,244,248,0.95)), url('https://images.unsplash.com/photo-1593697820821-6b7c9b0d8b41'); background-size: cover;">
-  <img src="https://images.unsplash.com/photo-1628595351029-c2bf17511435" alt="Indian Construction Safety Nets">
+  <img src="safety13.jpg" alt="Indian Construction Safety Nets">
   <div>
     <h2>About Spider Safety Net</h2>
     <p>
@@ -464,3 +607,8 @@ window.addEventListener('scroll',()=>{
 </script>
 </body>
 </html>
+
+
+
+
+ 

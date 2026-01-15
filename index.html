@@ -101,6 +101,9 @@
     }
 
     .card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
       background: #fff;
       padding: 25px;
       border-radius: 18px;
@@ -317,8 +320,14 @@
   text-decoration: none;
   transition: transform 0.3s;
 }
+.card{
+  display: grid;
+}
 .call-float:hover {
   transform: scale(1.1);
+}
+.bobby{
+  display: grid;
 }
 
 
@@ -390,7 +399,7 @@
   </div> <br>
 
   <br>
-   <div class="d-flex justify-content-evenly">
+   <div class="bobby">
 
 
 
@@ -419,11 +428,9 @@
   </div>
 
 
-  </div>
   <br><br><br>
 
 
-  <div class="d-flex justify-content-evenly">
 
 <div class="card" style="width: 18rem;">
   <img src="safety7.jpg"  class="card-img-top" alt="..." >
@@ -448,10 +455,9 @@
     <a href="tel:7207593308" class="call-float">📞</a>
   </div>
   </div>
-  </div>
+
   <br><br><br>
 
-  <div class="d-flex justify-content-evenly">
     
   <div class="card" style="width: 18rem;">
   <img src="safety6.jpg" class="card-img-top" alt="...">
@@ -476,11 +482,8 @@
     <a href="tel:7207593308" class="call-float">📞</a>
   </div>
 </div>
-</div>
 <br><br><br>
 
-
-<div class="d-flex justify-content-evenly">
   <div class="card" style="width: 18rem;">
   <img src="safety4.jpg"  class="card-img-top" alt="..." >
   <div class="card-body">
@@ -504,10 +507,9 @@
     <a href="tel:7207593308" class="call-float">📞</a>
   </div>
 </div>
-</div>
 <br><br><br>
 
-
+   </div>
   
 </section>
 
@@ -612,3 +614,4 @@ window.addEventListener('scroll',()=>{
 
 
  
+
